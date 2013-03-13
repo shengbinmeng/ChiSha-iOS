@@ -7,6 +7,7 @@
 //
 
 #import "ChiShaAppDelegate.h"
+#import "ChiShaViewController.h"
 
 @implementation ChiShaAppDelegate
 
@@ -14,7 +15,9 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
+    ChiShaViewController *vc = [[ChiShaViewController alloc] init];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    [self.window setRootViewController:nav];
     [self.window makeKeyAndVisible];
     return YES;
 }
