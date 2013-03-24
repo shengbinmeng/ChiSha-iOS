@@ -9,12 +9,15 @@
 #import "ChiShaViewController.h"
 #import "ChoiceListViewController.h"
 #import <AudioToolbox/AudioServices.h>
+#import "ChiShaChoiceManager.h"
 
 @interface ChiShaViewController ()
 
 @end
 
-@implementation ChiShaViewController
+@implementation ChiShaViewController {
+    NSMutableArray* choices;
+}
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -42,6 +45,8 @@
 }
 
 - (void) viewWillAppear:(BOOL)animated {
+    choices = [ChiShaChoiceManager getChoiceList];
+
     [self.conformButton setHidden:YES];
     [self.labelAbove setText:@"Shake Your Phone"];
     [self.labelBelow setText:@"or click the button below"];
@@ -78,10 +83,11 @@
 
 - (IBAction)decideWhat:(id)sender {
     
+    NSDictionary *choice = [choices objectAtIndex: (arc4random() % choices.count)];
     
     [self.labelAbove setText:@""];
     [self.labelBelow setText:@""];
-    [self.labelLarge setText:@"农园"];
+    [self.labelLarge setText:[choice objectForKey:@"name"]];
     [self.conformButton setHidden:NO];
 }
 

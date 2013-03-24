@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E80C890F16FF1ECD00E70532 /* ChiShaChoiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E80C890E16FF1ECD00E70532 /* ChiShaChoiceManager.m */; };
 		E81022A916F081A100663D92 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E81022A816F081A000663D92 /* AudioToolbox.framework */; };
 		E848E30316DE38F7006CB30C /* ChoiceListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E848E30216DE38F7006CB30C /* ChoiceListViewController.m */; };
 		E848E30716DE3927006CB30C /* ChiShaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E848E30516DE3927006CB30C /* ChiShaViewController.m */; };
@@ -23,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E80C890D16FF1ECD00E70532 /* ChiShaChoiceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChiShaChoiceManager.h; sourceTree = "<group>"; };
+		E80C890E16FF1ECD00E70532 /* ChiShaChoiceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChiShaChoiceManager.m; sourceTree = "<group>"; };
 		E81022A816F081A000663D92 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		E848E30116DE38F7006CB30C /* ChoiceListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoiceListViewController.h; sourceTree = "<group>"; };
 		E848E30216DE38F7006CB30C /* ChoiceListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChoiceListViewController.m; sourceTree = "<group>"; };
@@ -95,6 +98,8 @@
 				E848E30616DE3927006CB30C /* ChiShaViewController.xib */,
 				E848E30116DE38F7006CB30C /* ChoiceListViewController.h */,
 				E848E30216DE38F7006CB30C /* ChoiceListViewController.m */,
+				E80C890D16FF1ECD00E70532 /* ChiShaChoiceManager.h */,
+				E80C890E16FF1ECD00E70532 /* ChiShaChoiceManager.m */,
 				E8BA2CED16AA5F30003D3C2C /* ChiShaAppDelegate.h */,
 				E8BA2CEE16AA5F30003D3C2C /* ChiShaAppDelegate.m */,
 				E8BA2CE516AA5F30003D3C2C /* Supporting Files */,
@@ -187,6 +192,7 @@
 				E8BA2CEF16AA5F30003D3C2C /* ChiShaAppDelegate.m in Sources */,
 				E848E30316DE38F7006CB30C /* ChoiceListViewController.m in Sources */,
 				E848E30716DE3927006CB30C /* ChiShaViewController.m in Sources */,
+				E80C890F16FF1ECD00E70532 /* ChiShaChoiceManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
