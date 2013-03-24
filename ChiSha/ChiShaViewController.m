@@ -48,8 +48,8 @@
     choices = [ChiShaChoiceManager getChoiceList];
 
     [self.conformButton setHidden:YES];
-    [self.labelAbove setText:@"Shake Your Phone"];
-    [self.labelBelow setText:@"or click the button below"];
+    [self.labelAbove setText:@"~~摇一摇~~"];
+    [self.labelBelow setText:@"来决定吃啥"];
     [self.labelLarge setText:@""];
 }
 
@@ -86,13 +86,13 @@
     NSDictionary *choice = [choices objectAtIndex: (arc4random() % choices.count)];
     
     [self.labelAbove setText:@""];
-    [self.labelBelow setText:@""];
+    [self.labelBelow setText:@"虽然还能再摇，但要忠于第一次哦"];
     [self.labelLarge setText:[choice objectForKey:@"name"]];
     [self.conformButton setHidden:NO];
 }
 
 - (IBAction)conformThat:(id)sender {
-    [self.labelBelow setText:@"Enjoy!"];
+    [self.labelBelow setText:@"不错的地方，去吧"];
     [self.conformButton setHidden:YES];
 }
 
