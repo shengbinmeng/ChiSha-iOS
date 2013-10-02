@@ -33,6 +33,7 @@
     [super viewDidLoad];
     choices = [ChiShaChoiceManager getChoiceList];
     
+    self.editButtonItem.title = @"编辑";
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
@@ -40,6 +41,18 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)setEditing:(BOOL)editing animated:(BOOL)animated
+{
+    // Make sure you call super first
+    [super setEditing:editing animated:animated];
+    
+    if (editing) {
+        self.editButtonItem.title = @"完成";
+    } else {
+        self.editButtonItem.title = @"编辑";
+    }
 }
 
 #pragma mark - Table view data source
@@ -75,7 +88,7 @@
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Return NO if you do not want the specified item to be editable.
-    return NO;
+    return YES;
 }
 
 // Override to support editing the table view.

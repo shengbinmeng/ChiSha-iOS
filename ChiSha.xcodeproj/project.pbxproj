@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6C2D79D017FC69F70020EB61 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C2D79CF17FC69F70020EB61 /* AudioToolbox.framework */; };
 		E80C890F16FF1ECD00E70532 /* ChiShaChoiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E80C890E16FF1ECD00E70532 /* ChiShaChoiceManager.m */; };
-		E81022A916F081A100663D92 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E81022A816F081A000663D92 /* AudioToolbox.framework */; };
 		E848E30316DE38F7006CB30C /* ChoiceListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E848E30216DE38F7006CB30C /* ChoiceListViewController.m */; };
 		E848E30716DE3927006CB30C /* ChiShaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E848E30516DE3927006CB30C /* ChiShaViewController.m */; };
 		E848E30816DE3927006CB30C /* ChiShaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E848E30616DE3927006CB30C /* ChiShaViewController.xib */; };
@@ -24,9 +24,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6C2D79CF17FC69F70020EB61 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		E80C890D16FF1ECD00E70532 /* ChiShaChoiceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChiShaChoiceManager.h; sourceTree = "<group>"; };
 		E80C890E16FF1ECD00E70532 /* ChiShaChoiceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChiShaChoiceManager.m; sourceTree = "<group>"; };
-		E81022A816F081A000663D92 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		E848E30116DE38F7006CB30C /* ChoiceListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoiceListViewController.h; sourceTree = "<group>"; };
 		E848E30216DE38F7006CB30C /* ChoiceListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChoiceListViewController.m; sourceTree = "<group>"; };
 		E848E30416DE3927006CB30C /* ChiShaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChiShaViewController.h; sourceTree = "<group>"; };
@@ -52,7 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E81022A916F081A100663D92 /* AudioToolbox.framework in Frameworks */,
+				6C2D79D017FC69F70020EB61 /* AudioToolbox.framework in Frameworks */,
 				E8BA2CDF16AA5F30003D3C2C /* UIKit.framework in Frameworks */,
 				E8BA2CE116AA5F30003D3C2C /* Foundation.framework in Frameworks */,
 				E8BA2CE316AA5F30003D3C2C /* CoreGraphics.framework in Frameworks */,
@@ -65,7 +65,6 @@
 		E8BA2CCF16AA5F30003D3C2C = {
 			isa = PBXGroup;
 			children = (
-				E81022A816F081A000663D92 /* AudioToolbox.framework */,
 				E8BA2CE416AA5F30003D3C2C /* ChiSha */,
 				E8BA2CDD16AA5F30003D3C2C /* Frameworks */,
 				E8BA2CDB16AA5F30003D3C2C /* Products */,
@@ -83,6 +82,7 @@
 		E8BA2CDD16AA5F30003D3C2C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6C2D79CF17FC69F70020EB61 /* AudioToolbox.framework */,
 				E8BA2CDE16AA5F30003D3C2C /* UIKit.framework */,
 				E8BA2CE016AA5F30003D3C2C /* Foundation.framework */,
 				E8BA2CE216AA5F30003D3C2C /* CoreGraphics.framework */,
@@ -148,7 +148,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = ChiSha;
-				LastUpgradeCheck = 0450;
+				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Peking University";
 			};
 			buildConfigurationList = E8BA2CD416AA5F30003D3C2C /* Build configuration list for PBXProject "ChiSha" */;
@@ -232,7 +232,8 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -253,7 +254,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
