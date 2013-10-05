@@ -23,7 +23,6 @@
     if (self) {
         // Custom initialization
         [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
-
     }
     return self;
 }
@@ -40,6 +39,11 @@
     [alertView dismissWithClickedButtonIndex:buttonIndex animated:YES];
     if (buttonIndex == 1) {
         UITextField *textField = [alertView textFieldAtIndex:0];
+        if ([textField.text isEqualToString:@"添加新选项..."]) {
+            UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"我勒个去" message:@"别输入这个字符串啊，搞雷同了程序十分不好办！咱重输吧" delegate:self cancelButtonTitle:@"好吧" otherButtonTitles:nil];
+            [alert show];
+            return;
+        }
         NSMutableDictionary *d = [[NSMutableDictionary alloc] init];
         [d setValue:[NSString stringWithFormat:@"%@", textField.text] forKey:@"name"];
         [choices insertObject:d atIndex:1];
@@ -55,13 +59,6 @@
     
     self.editButtonItem.title = @"编辑";
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
-    UIButton *button1 = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [button1 setTitle:@"添加新选项..." forState:UIControlStateNormal];
-    [button1 setFrame:CGRectMake(0.0, 0.0, self.tableView.frame.size.width, 44.0)];
-    [button1 addTarget:self action:@selector(addChoice) forControlEvents:UIControlEventTouchUpInside];
-    //[self.tableView setTableHeaderView:button1];
-    
 }
 
 - (void) viewWillDisappear:(BOOL)animated
@@ -120,7 +117,6 @@
     NSDictionary *choice = [choices objectAtIndex:[indexPath row]];
     // Configure the cell...
     cell.textLabel.text = [choice valueForKey:@"name"];
-
     
     return cell;
 }
