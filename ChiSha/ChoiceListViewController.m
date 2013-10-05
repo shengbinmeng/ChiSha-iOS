@@ -28,6 +28,26 @@
     return self;
 }
 
+
+- (void) addChoice
+{
+    UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"" message:@"输入新的吃啥选项" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+    alert.alertViewStyle = UIAlertViewStylePlainTextInput;
+    [alert show];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    [alertView dismissWithClickedButtonIndex:buttonIndex animated:YES];
+    if (buttonIndex == 1) {
+        UITextField *textField = [alertView textFieldAtIndex:0];
+        NSMutableDictionary *d = [[NSMutableDictionary alloc] init];
+        [d setValue:[NSString stringWithFormat:@"%@", textField.text] forKey:@"name"];
+        [choices insertObject:d atIndex:1];
+        NSArray *paths = [NSArray arrayWithObject:[NSIndexPath indexPathForRow:1 inSection:0]];
+        [[self tableView] insertRowsAtIndexPaths:paths withRowAnimation:UITableViewRowAnimationTop];
+    }
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -35,6 +55,20 @@
     
     self.editButtonItem.title = @"编辑";
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    UIButton *button1 = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [button1 setTitle:@"添加新选项..." forState:UIControlStateNormal];
+    [button1 setFrame:CGRectMake(0.0, 0.0, self.tableView.frame.size.width, 44.0)];
+    [button1 addTarget:self action:@selector(addChoice) forControlEvents:UIControlEventTouchUpInside];
+    //[self.tableView setTableHeaderView:button1];
+    
+}
+
+- (void) viewWillDisappear:(BOOL)animated
+{
+    if (self.isEditing) {
+        [self setEditing:NO animated:NO];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -43,6 +77,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+
 - (void)setEditing:(BOOL)editing animated:(BOOL)animated
 {
     // Make sure you call super first
@@ -50,8 +85,14 @@
     
     if (editing) {
         self.editButtonItem.title = @"完成";
+        NSMutableDictionary *d = [[NSMutableDictionary alloc] init];
+        [d setValue:[NSString stringWithFormat:@"%@", @"添加新选项..."] forKey:@"name"];
+        [choices insertObject:d atIndex:0];
+        [self.tableView reloadData];
     } else {
         self.editButtonItem.title = @"编辑";
+        [choices removeObjectAtIndex:0];
+        [self.tableView reloadData];
     }
 }
 
@@ -88,7 +129,16 @@
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Return NO if you do not want the specified item to be editable.
-    return YES;
+    return self.editing;
+}
+
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
+
+    if (indexPath.row == 0) {
+        return UITableViewCellEditingStyleInsert;
+    } else {
+        return UITableViewCellEditingStyleDelete;
+    }
 }
 
 // Override to support editing the table view.
@@ -96,10 +146,12 @@
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
+        [choices removeObjectAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }
     else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+        [self addChoice];
     }   
 }
 
