@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6C2007BE180251DC004387AD /* chi-57.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C2007B9180251DC004387AD /* chi-57.png */; };
-		6C2007BF180251DC004387AD /* chi-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C2007BA180251DC004387AD /* chi-72.png */; };
-		6C2007C0180251DC004387AD /* chi-114.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C2007BB180251DC004387AD /* chi-114.png */; };
-		6C2007C1180251DC004387AD /* chi-144.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C2007BC180251DC004387AD /* chi-144.png */; };
 		6C2007C718025306004387AD /* chi_76.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C2007C418025306004387AD /* chi_76.png */; };
 		6C2007C818025306004387AD /* chi_120.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C2007C518025306004387AD /* chi_120.png */; };
 		6C2007C918025306004387AD /* chi_152.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C2007C618025306004387AD /* chi_152.png */; };
+		6C2007CE180256BF004387AD /* chi_57.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C2007CA180256BF004387AD /* chi_57.png */; };
+		6C2007CF180256BF004387AD /* chi_72.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C2007CB180256BF004387AD /* chi_72.png */; };
+		6C2007D0180256BF004387AD /* chi_114.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C2007CC180256BF004387AD /* chi_114.png */; };
+		6C2007D1180256BF004387AD /* chi_144.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C2007CD180256BF004387AD /* chi_144.png */; };
 		6C2D79D017FC69F70020EB61 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C2D79CF17FC69F70020EB61 /* AudioToolbox.framework */; };
 		E80C890F16FF1ECD00E70532 /* ChiShaChoiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E80C890E16FF1ECD00E70532 /* ChiShaChoiceManager.m */; };
 		E848E30316DE38F7006CB30C /* ChoiceListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E848E30216DE38F7006CB30C /* ChoiceListViewController.m */; };
@@ -31,13 +31,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6C2007B9180251DC004387AD /* chi-57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chi-57.png"; sourceTree = "<group>"; };
-		6C2007BA180251DC004387AD /* chi-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chi-72.png"; sourceTree = "<group>"; };
-		6C2007BB180251DC004387AD /* chi-114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chi-114.png"; sourceTree = "<group>"; };
-		6C2007BC180251DC004387AD /* chi-144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chi-144.png"; sourceTree = "<group>"; };
 		6C2007C418025306004387AD /* chi_76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chi_76.png; sourceTree = "<group>"; };
 		6C2007C518025306004387AD /* chi_120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chi_120.png; sourceTree = "<group>"; };
 		6C2007C618025306004387AD /* chi_152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chi_152.png; sourceTree = "<group>"; };
+		6C2007CA180256BF004387AD /* chi_57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chi_57.png; sourceTree = "<group>"; };
+		6C2007CB180256BF004387AD /* chi_72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chi_72.png; sourceTree = "<group>"; };
+		6C2007CC180256BF004387AD /* chi_114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chi_114.png; sourceTree = "<group>"; };
+		6C2007CD180256BF004387AD /* chi_144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chi_144.png; sourceTree = "<group>"; };
 		6C2D79CF17FC69F70020EB61 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		E80C890D16FF1ECD00E70532 /* ChiShaChoiceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChiShaChoiceManager.h; sourceTree = "<group>"; };
 		E80C890E16FF1ECD00E70532 /* ChiShaChoiceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChiShaChoiceManager.m; sourceTree = "<group>"; };
@@ -79,13 +79,13 @@
 		6C2007C3180251EF004387AD /* Icons */ = {
 			isa = PBXGroup;
 			children = (
-				6C2007B9180251DC004387AD /* chi-57.png */,
+				6C2007CA180256BF004387AD /* chi_57.png */,
+				6C2007CB180256BF004387AD /* chi_72.png */,
+				6C2007CC180256BF004387AD /* chi_114.png */,
+				6C2007CD180256BF004387AD /* chi_144.png */,
 				6C2007C418025306004387AD /* chi_76.png */,
 				6C2007C518025306004387AD /* chi_120.png */,
 				6C2007C618025306004387AD /* chi_152.png */,
-				6C2007BA180251DC004387AD /* chi-72.png */,
-				6C2007BB180251DC004387AD /* chi-114.png */,
-				6C2007BC180251DC004387AD /* chi-144.png */,
 			);
 			name = Icons;
 			sourceTree = "<group>";
@@ -203,17 +203,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C2007C818025306004387AD /* chi_120.png in Resources */,
-				6C2007C1180251DC004387AD /* chi-144.png in Resources */,
 				E8BA2CE916AA5F30003D3C2C /* InfoPlist.strings in Resources */,
+				6C2007CE180256BF004387AD /* chi_57.png in Resources */,
+				6C2007D0180256BF004387AD /* chi_114.png in Resources */,
 				6C2007C918025306004387AD /* chi_152.png in Resources */,
 				E8BA2CF116AA5F30003D3C2C /* Default.png in Resources */,
-				6C2007BE180251DC004387AD /* chi-57.png in Resources */,
+				6C2007D1180256BF004387AD /* chi_144.png in Resources */,
 				E8BA2CF316AA5F30003D3C2C /* Default@2x.png in Resources */,
 				E8BA2CF516AA5F30003D3C2C /* Default-568h@2x.png in Resources */,
-				6C2007C0180251DC004387AD /* chi-114.png in Resources */,
-				6C2007BF180251DC004387AD /* chi-72.png in Resources */,
 				6C2007C718025306004387AD /* chi_76.png in Resources */,
 				E848E30816DE3927006CB30C /* ChiShaViewController.xib in Resources */,
+				6C2007CF180256BF004387AD /* chi_72.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
