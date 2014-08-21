@@ -179,6 +179,11 @@
 				CLASSPREFIX = ChiSha;
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Peking University";
+				TargetAttributes = {
+					E8BA2CD916AA5F30003D3C2C = {
+						DevelopmentTeam = RAE237RSGC;
+					};
+				};
 			};
 			buildConfigurationList = E8BA2CD416AA5F30003D3C2C /* Build configuration list for PBXProject "ChiSha" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -301,6 +306,7 @@
 		E8BA2CF916AA5F30003D3C2C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ChiSha/ChiSha-Prefix.pch";
 				INFOPLIST_FILE = "ChiSha/ChiSha-Info.plist";
@@ -313,6 +319,7 @@
 		E8BA2CFA16AA5F30003D3C2C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ChiSha/ChiSha-Prefix.pch";
 				INFOPLIST_FILE = "ChiSha/ChiSha-Info.plist";
